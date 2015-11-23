@@ -1,0 +1,27 @@
+# (c) David T. Nguyen        
+# July 2014                                                   
+# dunguk@gmail.com  
+
+# usage:
+# ./filter_whitelist.sh $1 $2
+# $1 - input with processes (packages), each per line
+# $2 - output with filtered processes (packages)
+
+
+
+cat $1 > help.txt
+
+while read line
+do
+        cat help.txt | grep -v $line > temp.txt
+        cat temp.txt > help.txt
+done < whitelist.dat
+
+echo "About to clean following...\n"
+cat temp.txt | tee $2
+
+
+
+rm temp.txt
+rm help.txt
+

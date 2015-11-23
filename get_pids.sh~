@@ -1,0 +1,18 @@
+# (c) David T. Nguyen, Facebook, Inc.,                        
+# July 2014                                                   
+# dunguk@gmail.com  
+
+# usage:
+# ./get_pids.sh $1 $2
+# $1 - input file with list of processes from 'ps'
+# $2 - output file for process IDs
+
+
+ cat $1 | while read line                                       
+                       do                                                      
+                               echo `echo $line | xargs`   >> temp.txt
+                       done                                    
+                                                                  
+ cat temp.txt | cut -d' ' -f1 | tee $2
+
+

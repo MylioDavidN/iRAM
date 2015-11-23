@@ -1,0 +1,32 @@
+# David T. Nguyen
+# July 2014
+# dunguk@gmail.com
+
+
+# usage:
+# ./get_page_faults.sh $1
+# get number of page faults for an app
+# $1 - application to be tested in form package name
+
+APP=$1
+
+# turn screen on
+#input keyevent 26
+#sleep 1
+
+# launch app
+monkey -v -s 10 -p $APP 1
+sleep 8
+
+# issue 100 user events (insert 1000ms between events, no appswitches)
+monkey -v -s 10 --throttle 1000 --pct-appswitch 0 -p $APP 168 &
+perf.arm.static stat -e faults -p `ps | grep $APP | xargs | cut -d' ' -f2` 
+sleep 1
+
+# kill app
+am force-stop $APP
+sleep 1
+
+# turn screen off
+#input keyevent 26
+

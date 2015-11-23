@@ -1,5 +1,3 @@
-# iRAM
-
 # (c) David T. Nguyen 
 # November 2015
 # dunguk@gmail.com

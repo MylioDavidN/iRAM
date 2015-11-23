@@ -1,5 +1,3 @@
-# iRAM
-
 # (c) David T. Nguyen 
 # November 2015
 # dunguk@gmail.com
@@ -57,7 +55,7 @@ To log current battery levels with/without iRAM:
 ===================
 
 
-To evaluate iRAM's performance with PERF test:                                                                                       
+To evaluate MemDragon's performance with PERF test:                                                                                       
         ./evaluate_perf.sh
 
 

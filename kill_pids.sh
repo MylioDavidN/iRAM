@@ -1,0 +1,14 @@
+# (c) David T. Nguyen                    
+# July 2014                                                   
+# dunguk@gmail.com  
+
+# usage:
+# ./kill_pids.sh $1
+# $1 - input with PIDS of processes to kill
+
+
+cat $1 | while read line
+                                do
+                                        kill `echo $line`
+                                done
+

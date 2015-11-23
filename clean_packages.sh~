@@ -1,0 +1,15 @@
+# (c) David T. Nguyen, Facebook, Inc.,                        
+# July 2014                                                   
+# dunguk@gmail.com  
+
+# usage:
+# ./clean_packages.sh
+
+
+
+cat packages2.txt | while read line
+                                do
+                                        pm clear `echo $line`
+                                done
+
+

@@ -1,0 +1,22 @@
+# David T. Nguyen, Facebook, Inc., 
+# July 2014
+# dunguk@gmail.com
+
+
+# usage:
+# ./log.sh $1
+# runs logger to record free memory levels
+# $1 - file for log outputs
+
+# =======
+
+
+date > $1
+
+while true
+do 
+	./get_free_mem_in_pct.sh | tee -a  $1
+	
+	sleep 1
+done
+
