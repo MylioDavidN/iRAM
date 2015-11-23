@@ -1,8 +1,8 @@
 # iRAM
 
-# (c) David T. Nguyen 
-# November 2015
-# dunguk@gmail.com
+(c) David T. Nguyen 
+November 2015
+dunguk@gmail.com
 
 iRAM is a service for maximizing the amount of available memory in order to improve the overall performance
 of the device. This is not simple, since overly aggressive policy will degrade the performance itself. iRAM provides a set of various 
@@ -54,7 +54,6 @@ To log current CPU levels:
 
 To log current battery levels with/without iRAM:
 	./log_battery.sh output_file_name.txt
-===================
 
 
 To evaluate iRAM's performance with PERF test:                                                                                       
