@@ -1,7 +1,7 @@
 # iRAM
 
-(c) David T. Nguyen 
-November 2015
+(c) David T. Nguyen, 
+November 2015,
 dunguk@gmail.com
 
 iRAM is a service for maximizing the amount of available memory in order to improve the overall performance
