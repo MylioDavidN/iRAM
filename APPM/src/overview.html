@@ -1,0 +1,26 @@
+<body>
+This document is API specification for the <i>APPM</i> algorithm.
+<p>
+APPM is an online learning algorithm that can be used in modeling a sequence of
+events. This algorithm can be used in predicting the event likely
+to occur next. This algorithm outputs top-k predictions. Also, it uses a simple 
+temporal model that can be used to compute the likelihood of some event to occur 
+within a specified time interval. Using these likelihoods and predictions, a system
+can take some useful actions if the likelihood of an event crosses some threshold. </p>
+
+<p>At the core of this algorithm, we use a well known data-compression algorithm called 
+Prediction By Partial Matching (PPM). The core PPM algorithm and its implementation is 
+attributed to  <a href="http://compression.ru/ds/">Dmitry Shkarin</a>. We have used 
+<a href="http://compression.ru/ds/">PPMd variant H</a> and modified it for our purpose. 
+We do not make any claim of authorship, ownership or the correctness of the PPMd program. 
+We provide this code here only for experimental and non-commercial use only. 
+Use this program at your own risks.</p>
+
+<br/>
+<b>Reference/Citation</b><br/>
+ Abhinav Parate, Matthias B&#246;hmer, David Chu, Deepak Ganesan, Benjamin Marlin, 
+ <b>Practical Prediction and Prefetch for Faster Access to Applications on Mobile phones</b>, 
+ Proceedings of the 2013 ACM Conference on Ubiquitous Computing (UbiComp 2013)
+
+@author Abhinav Parate
+</body>
